@@ -8,7 +8,7 @@ import { AnimatePresence } from 'motion/react';
 
 export default function App() {
   return (
-    <ThemeProvider defaultTheme="light" storageKey="aureum-theme">
+    <ThemeProvider defaultTheme="light" storageKey="dawrash-theme">
       <Router>
         <div className="min-h-screen bg-white dark:bg-black font-sans selection:bg-amber-500 selection:text-white transition-colors duration-300">
           <Navbar />

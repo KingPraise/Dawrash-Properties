@@ -82,7 +82,7 @@ export function Footer() {
 
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-gray-custom text-[10px] uppercase tracking-[2px]">
-            © {currentYear} Aureum Estate. All rights reserved.
+            © {currentYear} DawRash Properties. All rights reserved.
           </p>
           <div className="flex gap-10">
             <a href="#" className="text-gray-custom hover:text-white text-[10px] uppercase tracking-[2px] transition-colors">Privacy Policy</a>

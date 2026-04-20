@@ -4,6 +4,7 @@ import { Menu, X, Home } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { ThemeToggle } from './ThemeToggle';
+import { SafeImage } from './SafeImage';
 import { Link } from 'react-router-dom';
 
 export function Navbar() {
@@ -36,7 +37,12 @@ export function Navbar() {
       )}
     >
       <div className="w-full flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
+        <Link to="/" className="flex items-center gap-3 group">
+          <SafeImage
+            src="/logo-removebg-preview.png"
+            alt="DawRash Properties logo"
+            className="w-24 h-24 object-contain"
+          />
           <div
             className={cn(
               "font-serif text-2xl tracking-[4px] font-bold uppercase transition-colors",
