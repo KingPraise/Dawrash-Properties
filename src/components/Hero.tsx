@@ -12,7 +12,7 @@ export function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <SafeImage
-          src="public/image 1 upscaled.png"
+          src="/image 1 upscaled.png"
           alt="Luxury Villa Exterior"
           className="w-full h-full object-cover opacity-90 dark:opacity-70 transition-opacity duration-1000"
         />
