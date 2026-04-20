@@ -31,8 +31,8 @@ export function Hero() {
             </span>
           </div>
           <h1 className="text-5xl md:text-7xl font-serif italic text-white leading-[1.1] mb-10">
-            Detached Luxury Villa in <br />
-            Pilar de la Horadada
+            DawRash <br />
+            Properties
           </h1>
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <Button size="lg" className="bg-black text-white hover:bg-white hover:text-black transition-all px-12 py-8 text-xs uppercase tracking-[3px] font-bold rounded-none border border-black">

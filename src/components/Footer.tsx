@@ -12,7 +12,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-8">
             <div className="font-serif text-2xl tracking-[4px] font-bold uppercase">
-              AUREUM<span className="text-gold">ESTATE</span>
+              DawRash <span className="text-gold">Properties</span>
             </div>
             <p className="text-gray-custom font-light leading-relaxed text-sm">
               The world's leading luxury real estate marketplace. We connect the most prestigious properties with the most discerning buyers.

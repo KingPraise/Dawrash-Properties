@@ -37,11 +37,13 @@ export function Navbar() {
     >
       <div className="w-full flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className={cn(
-            "font-serif text-2xl tracking-[4px] font-bold uppercase transition-colors",
-            isScrolled ? "text-black dark:text-white" : "text-white"
-          )}>
-            AUREUM<span className="text-gold">ESTATE</span>
+          <div
+            className={cn(
+              "font-serif text-2xl tracking-[4px] font-bold uppercase transition-colors",
+              isScrolled ? "text-black dark:text-white" : "text-white"
+            )}
+          >
+            DawRash <span className="text-gold">Properties</span>
           </div>
         </Link>
 
