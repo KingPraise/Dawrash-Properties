@@ -1,15 +1,18 @@
-import { motion } from 'motion/react';
-import { Button } from '@/components/ui/button';
-import { ChevronDown } from 'lucide-react';
-import { SafeImage } from './SafeImage';
+import { motion } from "motion/react";
+import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
+import { SafeImage } from "./SafeImage";
 
 export function Hero() {
   return (
-    <section id="home" className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-black">
+    <section
+      id="home"
+      className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-black"
+    >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <SafeImage
-          src="input_file_3.png"
+          src="public/image 1 upscaled.png"
           alt="Luxury Villa Exterior"
           className="w-full h-full object-cover opacity-90 dark:opacity-70 transition-opacity duration-1000"
         />
@@ -21,7 +24,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-3xl"
         >
           <div className="flex items-center gap-3 mb-6">
@@ -35,7 +38,10 @@ export function Hero() {
             Properties
           </h1>
           <div className="flex flex-col sm:flex-row items-center gap-6">
-            <Button size="lg" className="bg-black text-white hover:bg-white hover:text-black transition-all px-12 py-8 text-xs uppercase tracking-[3px] font-bold rounded-none border border-black">
+            <Button
+              size="lg"
+              className="bg-black text-white hover:bg-white hover:text-black transition-all px-12 py-8 text-xs uppercase tracking-[3px] font-bold rounded-none border border-black"
+            >
               Request Property Details
             </Button>
             <div className="text-white/80 font-serif text-2xl italic">
