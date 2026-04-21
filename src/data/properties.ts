@@ -48,13 +48,7 @@ The impressive exterior facades blend harmoniously with the natural landscape of
 
 The interior has been meticulously designed to maximise comfort and functionality. With three bedrooms and two bathrooms, each space is spacious and welcoming for the whole family. Porcelain tile flooring provides elegance and ease of daily maintenance. Underfloor heating ensures warmth during the colder months, while electric blinds and built-in wardrobes add modern practicality to the home.`,
     images: [
-      "1-1.jpg",
-      "1-1.jpg",
-      "1-1.jpg",
-      "1-1.jpg",
-      "1-1.jpg",
-      "1-1.jpg",
-      "1-1.jpg",
+      "/1-1.jpg",
     ],
   },
   {
@@ -83,7 +77,7 @@ The interior has been meticulously designed to maximise comfort and functionalit
 Enjoy the Mediterranean climate with a private pool in each home, perfect for cooling off without leaving home. The solarium offers the ideal place to relax in the sun in complete privacy. Likewise, the spacious terrace is a versatile space that invites you to enjoy al fresco dining or simply contemplate the natural surroundings.
 
 The homes are designed with maximum comfort and functionality in mind. With three bedrooms and two bathrooms, they are perfect for families or couples seeking ample living space. Built-in wardrobes provide efficient storage solutions. They also feature advanced home automation for easy control of home functions and a private garage that guarantees security for both parking and storage.`,
-    images: ["2-1-scaled.jpg", "2-1-scaled.jpg", "2-1-scaled.jpg"],
+    images: ["/2-1-scaled.jpg", "/2-1-scaled.jpg"],
   },
 
   {
@@ -147,7 +141,7 @@ The interiors of the homes are designed with elegance and practicality in mind. 
 Enjoy the Mediterranean climate to the fullest in the outdoor spaces designed for your well-being. Each property has its own private garden, where you can create a personal haven of peace and relaxation. The spacious terraces are designed for al fresco dining or moments of rest after an active day. In addition, each home includes a private pool that adds an exclusive touch.
 
 The interior is meticulously designed to provide warmth and modern style. With three bedrooms and three bathrooms per home, ample space is guaranteed for the whole family. Porcelain tile flooring adds not only elegance but also practicality for daily maintenance. Fully furnished and equipped with modern appliances, these homes are designed with attention to every detail. Technological innovations such as advanced home automation faciliate a contemporary lifestyle.`,
-    images: ["1-1 (1).jpg", "1-1 (1).jpg", "1-1 (1).jpg"],
+    images: ["/1-1 (1).jpg", "/1-1 (1).jpg"],
   },
   {
     id: "7",
@@ -181,7 +175,7 @@ The interior is meticulously designed to provide warmth and modern style. With t
 The exteriors of these detached homes in Finestrat are designed to take full advantage of the Mediterranean climate. Each property features a private garden and terrace, ideal for relaxing outdoors. In addition, they have a solarium that offers extra space to soak up the sun and enjoy panoramic sea views. The presence of a private swimming pool at each home adds a touch of luxury and exclusivity, allowing you to enjoy a refreshing swim in the privacy of your own home.
 
 The interior of these detached homes in Finestrat is designed for maximum comfort and functionality. With a layout that includes three bedrooms and three bathrooms, every space is optimized for the well-being of its residents. Ceramic tile floors add a modern touch and are easy to maintain. The kitchen is equipped with high-end appliances, and the home automation system allows for easy control of various aspects of the home.`,
-    images: ["2-1 (1).jpg", "2-1 (1).jpg", "2-1 (1).jpg", "2-1 (1).jpg"],
+    images: ["/2-1 (1).jpg", "/2-1 (1).jpg" ],
   },
   {
     id: "8",
@@ -213,7 +207,7 @@ The interior of these detached homes in Finestrat is designed for maximum comfor
 The exterior design of these homes in Torre de la Horadada is conceived to take full advantage of the sunny climate of the Alicante coast. Each property has its own private garden, creating a perfect space for enjoying the outdoors. The spacious terraces are ideal for dining or relaxing at sunset, while the solarium offers a privileged spot for sunbathing year-round. In addition, each home includes a private pool, adding a touch of luxury.
 
 The interiors are meticulously designed to offer comfort and modern style. Ceramic floors provide elegance and ease of maintenance, while air conditioning ensures an ideal temperature year-round. Equipped with premium appliances, these homes simplify daily tasks and enhance quality of life. Built-in wardrobes optimize storage, keeping every space in the home tidy. With integrated electric blinds and video intercoms, an extra level of security is added.`,
-    images: ["1-1 (2).jpg", "1-1 (2).jpg", "1-1 (2).jpg"],
+    images: ["/1-1 (2).jpg", "/1-1 (2).jpg"],
   },
   {
     id: "9",
@@ -242,6 +236,6 @@ The interiors are meticulously designed to offer comfort and modern style. Ceram
 The house will have 3 bedrooms, 2 full bathrooms, and a bright living room integrated with the kitchen in a modern and functional space. The constructed area is 95 m² on a 305 m² plot. Completion is scheduled for May 2026.
 
 At €489,000, it is currently the most competitively priced option among independent villas in the area, offering an exceptional opportunity for those looking for a modern home in a sought-after location.`,
-    images: ["3-1.jpg", "3-2.jpg", "3-3.jpg", "3-4.jpg"],
+    images: ["/3-1.jpg", "/3-2.jpg", "/3-3.jpg", "/3-4.jpg"],
   },
 ];

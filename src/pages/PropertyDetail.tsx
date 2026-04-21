@@ -1,14 +1,23 @@
-import { useParams, Link } from 'react-router-dom';
-import { properties } from '../data/properties';
-import { motion } from 'motion/react';
-import { Bed, Bath, Square, MapPin, ArrowLeft, Check, Phone, Mail } from 'lucide-react';
-import { SafeImage } from '../components/SafeImage';
-import { Button } from '@/components/ui/button';
-import { useEffect } from 'react';
+import { useParams, Link } from "react-router-dom";
+import { properties } from "../data/properties";
+import { motion } from "motion/react";
+import {
+  Bed,
+  Bath,
+  Square,
+  MapPin,
+  ArrowLeft,
+  Check,
+  Phone,
+  Mail,
+} from "lucide-react";
+import { SafeImage } from "../components/SafeImage";
+import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 export function PropertyDetail() {
   const { slug } = useParams();
-  const property = properties.find(p => p.slug === slug);
+  const property = properties.find((p) => p.slug === slug);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -19,7 +28,10 @@ export function PropertyDetail() {
       <div className="min-h-screen flex items-center justify-center p-10">
         <div className="text-center">
           <h1 className="text-4xl font-serif mb-6">Property Not Found</h1>
-          <Link to="/" className="text-gold uppercase tracking-[2px] text-sm font-bold border-b border-gold">
+          <Link
+            to="/"
+            className="text-gold uppercase tracking-[2px] text-sm font-bold border-b border-gold"
+          >
             Return to Portfolio
           </Link>
         </div>
@@ -27,9 +39,9 @@ export function PropertyDetail() {
     );
   }
 
-  const formatter = new Intl.NumberFormat('en-EU', {
-    style: 'currency',
-    currency: 'EUR',
+  const formatter = new Intl.NumberFormat("en-EU", {
+    style: "currency",
+    currency: "EUR",
     maximumFractionDigits: 0,
   });
 
@@ -43,9 +55,17 @@ export function PropertyDetail() {
     >
       {/* Header Section */}
       <section className="px-10 md:px-[60px] py-16 max-w-7xl mx-auto">
-        <Link to="/" className="inline-flex items-center gap-2 text-gray-custom hover:text-gold transition-colors mb-10 group">
-          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-          <span className="text-[10px] uppercase tracking-[2px] font-bold">Back to Portfolio</span>
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 text-gray-custom hover:text-gold transition-colors mb-10 group"
+        >
+          <ArrowLeft
+            size={16}
+            className="group-hover:-translate-x-1 transition-transform"
+          />
+          <span className="text-[10px] uppercase tracking-[2px] font-bold">
+            Back to Portfolio
+          </span>
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end">
@@ -61,8 +81,12 @@ export function PropertyDetail() {
             </h1>
           </div>
           <div className="lg:text-right">
-            <p className="text-gray-custom text-[10px] uppercase tracking-[3px] mb-2">Asking Price</p>
-            <p className="text-5xl font-serif text-gold">{formatter.format(property.price)}</p>
+            <p className="text-gray-custom text-[10px] uppercase tracking-[3px] mb-2">
+              Asking Price
+            </p>
+            <p className="text-5xl font-serif text-gold">
+              {formatter.format(property.price)}
+            </p>
           </div>
         </div>
       </section>
@@ -83,10 +107,15 @@ export function PropertyDetail() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-24">
           <div className="space-y-12">
             <div>
-              <h2 className="text-[11px] uppercase tracking-[4px] font-bold text-gray-custom mb-10 border-b border-border-custom dark:border-white/10 pb-4">Overview</h2>
+              <h2 className="text-[11px] uppercase tracking-[4px] font-bold text-gray-custom mb-10 border-b border-border-custom dark:border-white/10 pb-4">
+                Overview
+              </h2>
               <div className="prose dark:prose-invert max-w-none">
-                {property.description.split('\n\n').map((paragraph, i) => (
-                  <p key={i} className="text-lg text-gray-700 dark:text-gray-300 font-light leading-relaxed mb-6">
+                {property.description.split("\n\n").map((paragraph, i) => (
+                  <p
+                    key={i}
+                    className="text-lg text-gray-700 dark:text-gray-300 font-light leading-relaxed mb-6"
+                  >
                     {paragraph}
                   </p>
                 ))}
@@ -99,7 +128,9 @@ export function PropertyDetail() {
                   <div className="w-8 h-8 flex items-center justify-center border border-gold/30 text-gold group-hover:bg-gold group-hover:text-white transition-all">
                     <Check size={14} />
                   </div>
-                  <span className="text-sm font-medium tracking-wide uppercase text-gray-800 dark:text-gray-200">{feature}</span>
+                  <span className="text-sm font-medium tracking-wide uppercase text-gray-800 dark:text-gray-200">
+                    {feature}
+                  </span>
                 </div>
               ))}
             </div>
@@ -107,30 +138,54 @@ export function PropertyDetail() {
 
           <aside className="space-y-12">
             <div className="bg-white dark:bg-black p-10 border border-border-custom dark:border-white/10 shadow-xl">
-              <h3 className="text-[11px] uppercase tracking-[4px] font-bold text-gold mb-10">Property Specifications</h3>
+              <h3 className="text-[11px] uppercase tracking-[4px] font-bold text-gold mb-10">
+                Property Specifications
+              </h3>
               <div className="space-y-8">
                 {[
-                  { label: 'Bedrooms', value: property.bedrooms, icon: Bed },
-                  { label: 'Bathrooms', value: property.bathrooms, icon: Bath },
-                  { label: 'Built Area', value: `${property.builtArea} m²`, icon: Square },
-                  { label: 'Plot Area', value: `${property.plotArea} m²`, icon: Square },
-                  { label: 'ID Number', value: property.id.padStart(4, '0'), icon: MapPin },
+                  { label: "Bedrooms", value: property.bedrooms, icon: Bed },
+                  { label: "Bathrooms", value: property.bathrooms, icon: Bath },
+                  {
+                    label: "Built Area",
+                    value: `${property.builtArea} m²`,
+                    icon: Square,
+                  },
+                  {
+                    label: "Plot Area",
+                    value: `${property.plotArea} m²`,
+                    icon: Square,
+                  },
+                  {
+                    label: "ID Number",
+                    value: property.id.padStart(4, "0"),
+                    icon: MapPin,
+                  },
                 ].map((spec, i) => (
-                  <div key={i} className="flex items-center justify-between border-b border-border-custom dark:border-white/10 pb-4">
+                  <div
+                    key={i}
+                    className="flex items-center justify-between border-b border-border-custom dark:border-white/10 pb-4"
+                  >
                     <div className="flex items-center gap-4">
                       <spec.icon size={16} className="text-gold" />
-                      <span className="text-[10px] uppercase tracking-[2px] text-gray-custom">{spec.label}</span>
+                      <span className="text-[10px] uppercase tracking-[2px] text-gray-custom">
+                        {spec.label}
+                      </span>
                     </div>
-                    <span className="text-lg font-serif italic dark:text-white">{spec.value}</span>
+                    <span className="text-lg font-serif italic dark:text-white">
+                      {spec.value}
+                    </span>
                   </div>
                 ))}
               </div>
             </div>
 
             <div className="bg-black text-white p-10">
-              <h3 className="text-[11px] uppercase tracking-[4px] font-bold text-gold mb-10">Inquire Now</h3>
+              <h3 className="text-[11px] uppercase tracking-[4px] font-bold text-gold mb-10">
+                Inquire Now
+              </h3>
               <p className="text-gray-custom text-sm mb-10 font-light">
-                Secure your private viewing for this exclusive property. Our associates are available 24/7.
+                Secure your private viewing for this exclusive property. Our
+                associates are available 24/7.
               </p>
               <div className="space-y-6">
                 <Button className="w-full h-14 bg-white text-black hover:bg-gold hover:text-white transition-all uppercase tracking-[3px] text-[10px] font-bold rounded-none">
@@ -147,7 +202,9 @@ export function PropertyDetail() {
 
       {/* Gallery Section */}
       <section className="px-10 md:px-[60px] py-24 max-w-7xl mx-auto">
-        <h2 className="text-4xl font-serif italic mb-16 dark:text-white">Living Spaces</h2>
+        <h2 className="text-4xl font-serif italic mb-16 dark:text-white">
+          Living Spaces
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {property.images.slice(1).map((image, i) => (
             <motion.div
