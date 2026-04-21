@@ -56,7 +56,7 @@ export function FeaturedProperty() {
           >
             <div>
               <div className="text-4xl font-serif text-gold mb-10 italic">
-                €450,000
+                €480,000
               </div>
 
               <div className="grid grid-cols-2 gap-8 mb-12">
