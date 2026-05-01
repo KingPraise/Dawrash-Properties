@@ -169,3 +169,4 @@ export function PropertyViewer3D({ imageUrl, title, isOpen, onClose }: PropertyV
     </AnimatePresence>
   );
 }
+

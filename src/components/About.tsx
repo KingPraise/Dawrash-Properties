@@ -17,17 +17,14 @@ export function About() {
             <h2 className="text-4xl md:text-6xl font-serif italic text-black dark:text-white tracking-tight mb-10 leading-tight">
               Redefining Luxury <br /> Real Estate
             </h2>
-            <div className="space-y-8 text-gray-600 dark:text-gray-400 font-light leading-relaxed text-lg">
+            <div className="text-gray-600 dark:text-gray-400 font-light leading-relaxed text-lg">
               <p>
                 With over two decades of experience in the luxury market,
-                DawRash Properties has become synonymous with excellence and
+                DawRash Real Estates has become synonymous with excellence and
                 exclusivity. We don't just sell properties; we curate lifestyles
-                for the world's most discerning clients.
-              </p>
-              <p>
-                Our portfolio features architectural masterpieces that blend
-                seamlessly with their surroundings, offering a perfect harmony
-                of form and function.
+                for the world's most discerning clients. Our portfolio features 
+                architectural masterpieces that blend seamlessly with their 
+                surroundings, offering a perfect harmony of form and function.
               </p>
             </div>
 

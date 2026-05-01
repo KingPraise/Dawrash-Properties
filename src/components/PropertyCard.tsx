@@ -25,85 +25,83 @@ export function PropertyCard({ property, index }: PropertyCardProps) {
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        whileHover={{ 
-          rotateY: 8, 
-          rotateX: -5, 
-          scale: 1.02,
-          transition: { duration: 0.4, ease: "easeOut" }
-        }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         viewport={{ once: true }}
-        className="perspective-1000"
-        style={{ transformStyle: 'preserve-3d' }}
+        className="relative group overflow-hidden bg-black aspect-square cursor-pointer"
       >
-        <Card className="overflow-hidden border border-border-custom dark:border-white/10 shadow-none hover:shadow-2xl transition-all duration-500 group bg-white dark:bg-black rounded-none h-full flex flex-col">
-          <Link to={`/property/${property.slug}`} className="relative aspect-[16/10] overflow-hidden bg-off-white dark:bg-black block">
-            <SafeImage 
-              src={property.images[0]} 
-              alt={property.title}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500" />
-            <Badge className="absolute top-4 left-4 bg-white/90 dark:bg-black/90 text-black dark:text-white border border-border-custom dark:border-white/10 px-3 py-1 uppercase tracking-widest text-[9px] font-bold rounded-none z-10">
-              {property.type}
-            </Badge>
-            
-            <button 
-              onClick={(e) => {
-                e.preventDefault();
-                setIsViewerOpen(true);
-              }}
-              className="absolute bottom-4 right-4 p-3 bg-white/90 dark:bg-black/90 text-black dark:text-white border border-border-custom dark:border-white/10 hover:bg-gold hover:text-white transition-all duration-300 z-10"
-              title="View in 3D"
-            >
-              <Box size={16} />
-            </button>
-          </Link>
+        <Link to={`/property/${property.slug}`} className="block h-full w-full relative">
+          <SafeImage 
+            src={property.images[0]} 
+            alt={property.title}
+            className="w-full h-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-110 opacity-70 group-hover:opacity-40"
+          />
           
-          <CardContent className="p-8 flex-grow">
-            <div className="flex items-center gap-2 text-gray-custom mb-3">
-              <MapPin size={12} />
-              <span className="text-[10px] uppercase tracking-[2px] font-semibold">{property.location}</span>
-            </div>
-            <Link to={`/property/${property.slug}`}>
-              <h3 className="text-2xl font-serif italic text-black dark:text-white mb-4 group-hover:text-gold transition-colors">
+          {/* Default Content (Visible initially, fades on hover) */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 transition-all duration-700 ease-in-out group-hover:opacity-0 group-hover:scale-95 group-hover:translate-y-4">
+            <h3 className="text-white text-4xl md:text-5xl font-serif italic mb-4 leading-tight drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)]">
+              {property.title.split(' ').slice(0, 1)} {property.type.split(' ').pop()}
+            </h3>
+            <div className="w-12 h-[1px] bg-gold/80 mb-4" />
+            <p className="text-white/90 uppercase tracking-[5px] text-[9px] font-black drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+              {property.type === 'Luxury Villa' ? 'Sprawling Estates' : 
+               property.type === 'Penthouse' ? 'Sky High Living' : 
+               property.type === 'Mansion' ? 'Iconic Grandeur' : 'Exceptional Residence'}
+            </p>
+          </div>
+
+          {/* Hover Overlay (Fades in on hover) */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-10 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out bg-black/40">
+            <motion.div 
+              initial={false}
+              className="flex flex-col items-center w-full"
+            >
+              <h3 className="text-white text-3xl font-serif italic mb-6 leading-tight max-w-[320px]">
                 {property.title}
               </h3>
-            </Link>
-            <p className="text-3xl font-serif text-gold mb-8">
-              {formatter.format(property.price)}
-            </p>
-            
-            <div className="grid grid-cols-2 gap-x-6 gap-y-4 border-t border-border-custom dark:border-white/10 pt-6">
-              <div className="border-b border-border-custom dark:border-white/10 pb-3">
-                <p className="text-[9px] uppercase tracking-[1px] text-gray-custom mb-1">Bedrooms</p>
-                <p className="text-lg font-medium dark:text-white">{property.bedrooms.toString().padStart(2, '0')}</p>
+              
+              <div className="w-10 h-[1px] bg-gold/50 mb-8" />
+              
+              <p className="text-gold text-3xl font-serif mb-10 tabular-nums tracking-tight">
+                {formatter.format(property.price)}
+              </p>
+              
+              <div className="flex gap-10 text-white/70 text-[9px] uppercase tracking-[3px] mb-12 font-bold justify-center items-center">
+                <div className="flex flex-col gap-2">
+                  <span className="text-white text-base leading-none">{property.bedrooms.toString().padStart(2, '0')}</span>
+                  <span className="text-[7px] opacity-60">Beds</span>
+                </div>
+                <div className="h-8 w-[1px] bg-white/10" />
+                <div className="flex flex-col gap-2">
+                  <span className="text-white text-base leading-none">{property.bathrooms.toString().padStart(2, '0')}</span>
+                  <span className="text-[7px] opacity-60">Baths</span>
+                </div>
+                <div className="h-8 w-[1px] bg-white/10" />
+                <div className="flex flex-col gap-2">
+                  <span className="text-white text-base leading-none">{property.builtArea}</span>
+                  <span className="text-[7px] opacity-60">m²</span>
+                </div>
               </div>
-              <div className="border-b border-border-custom dark:border-white/10 pb-3">
-                <p className="text-[9px] uppercase tracking-[1px] text-gray-custom mb-1">Bathrooms</p>
-                <p className="text-lg font-medium dark:text-white">{property.bathrooms.toString().padStart(2, '0')}</p>
+
+              <div className="relative overflow-hidden group/btn px-10 py-5 border border-white/20 text-white text-[10px] uppercase tracking-[4px] font-bold transition-all hover:bg-white hover:text-black hover:border-white">
+                Explore Property
               </div>
-              <div className="border-b border-border-custom dark:border-white/10 pb-3">
-                <p className="text-[9px] uppercase tracking-[1px] text-gray-custom mb-1">Built Area</p>
-                <p className="text-lg font-medium dark:text-white">{property.builtArea} m²</p>
-              </div>
-              <div className="border-b border-border-custom dark:border-white/10 pb-3">
-                <p className="text-[9px] uppercase tracking-[1px] text-gray-custom mb-1">Plot Size</p>
-                <p className="text-lg font-medium dark:text-white">{property.plotArea} m²</p>
-              </div>
-            </div>
-          </CardContent>
-          
-          <CardFooter className="px-8 pb-8 pt-0">
-            <Link to={`/property/${property.slug}`} className="w-full">
-              <button className="w-full py-4 bg-black dark:bg-white text-white dark:text-black text-[11px] uppercase tracking-[3px] font-bold border border-black dark:border-white hover:bg-white dark:hover:bg-black hover:text-black dark:hover:text-white transition-all duration-300">
-                View Full Details
-              </button>
-            </Link>
-          </CardFooter>
-        </Card>
+            </motion.div>
+          </div>
+        </Link>
+
+        {/* 3D Button - Keep it but style differently */}
+        <button 
+          onClick={(e) => {
+            e.preventDefault();
+            setIsViewerOpen(true);
+          }}
+          className="absolute bottom-6 right-6 p-4 bg-white/10 hover:bg-gold text-white backdrop-blur-md border border-white/20 transition-all duration-300 z-10 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0"
+          title="View in 3D"
+        >
+          <Box size={20} />
+        </button>
       </motion.div>
 
       <PropertyViewer3D 

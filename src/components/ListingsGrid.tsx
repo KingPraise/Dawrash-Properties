@@ -14,48 +14,49 @@ export function ListingsGrid() {
     : properties.filter(p => p.type === filter);
 
   return (
-    <section id="properties" className="py-24 px-10 md:px-[60px] bg-off-white dark:bg-[#0a0a0a] transition-colors duration-300">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-serif italic text-black dark:text-white tracking-tight mb-12"
-          >
-            Exclusive Portfolio
-          </motion.h2>
-          
-          {/* Filters */}
-          <div className="flex flex-wrap justify-center gap-8 mb-16">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setFilter(cat)}
-                className={cn(
-                  "uppercase tracking-[2px] text-[11px] font-bold transition-all pb-2 border-b-2",
-                  filter === cat 
-                    ? "text-gold border-gold" 
-                    : "text-gray-custom border-transparent hover:text-black dark:hover:text-white"
-                )}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {filteredProperties.map((property, index) => (
-            <PropertyCard key={property.id} property={property} index={index} />
+    <section id="properties" className="py-24 bg-white dark:bg-black transition-colors duration-300">
+      <div className="px-10 md:px-[60px] max-w-7xl mx-auto mb-20 text-center">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-4xl md:text-6xl font-serif italic text-black dark:text-white tracking-tight mb-12"
+        >
+          Exclusive Portfolio
+        </motion.h2>
+        
+        {/* Filters */}
+        <div className="flex flex-wrap justify-center gap-8">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setFilter(cat)}
+              className={cn(
+                "uppercase tracking-[2px] text-[11px] font-bold transition-all pb-2 border-b-2",
+                filter === cat 
+                  ? "text-gold border-gold" 
+                  : "text-gray-custom border-transparent hover:text-black dark:hover:text-white"
+              )}
+            >
+              {cat}
+            </button>
           ))}
         </div>
-        
-        {filteredProperties.length === 0 && (
-          <div className="text-center py-20">
-            <p className="text-gray-custom uppercase tracking-[2px] text-xs">No properties found in this category.</p>
-          </div>
-        )}
       </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-white/10">
+        {filteredProperties.map((property, index) => (
+          <div key={property.id} className="border-r border-b border-white/10 lg:[&:nth-child(3n)]:border-r-0 md:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r border-border-custom dark:border-white/5 transition-colors duration-500 hover:border-gold/30 z-0 hover:z-10">
+            <PropertyCard property={property} index={index} />
+          </div>
+        ))}
+      </div>
+      
+      {filteredProperties.length === 0 && (
+        <div className="text-center py-20 px-10">
+          <p className="text-gray-custom uppercase tracking-[2px] text-xs">No properties found in this category.</p>
+        </div>
+      )}
     </section>
   );
 }
+

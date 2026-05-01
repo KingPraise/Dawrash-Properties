@@ -30,3 +30,4 @@ export function ThemeToggle({ className, isScrolled }: ThemeToggleProps) {
     </Button>
   );
 }
+

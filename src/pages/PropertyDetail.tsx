@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { SafeImage } from "../components/SafeImage";
 import { Button } from "@/components/ui/button";
+import { InquiryModal } from "../components/InquiryModal";
 import { useEffect } from "react";
 
 export function PropertyDetail() {
@@ -111,14 +112,9 @@ export function PropertyDetail() {
                 Overview
               </h2>
               <div className="prose dark:prose-invert max-w-none">
-                {property.description.split("\n\n").map((paragraph, i) => (
-                  <p
-                    key={i}
-                    className="text-lg text-gray-700 dark:text-gray-300 font-light leading-relaxed mb-6"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+                <p className="text-xl text-gray-700 dark:text-gray-300 font-light leading-relaxed">
+                  {property.description}
+                </p>
               </div>
             </div>
 
@@ -188,12 +184,22 @@ export function PropertyDetail() {
                 associates are available 24/7.
               </p>
               <div className="space-y-6">
-                <Button className="w-full h-14 bg-white text-black hover:bg-gold hover:text-white transition-all uppercase tracking-[3px] text-[10px] font-bold rounded-none">
+                <Button 
+                  onClick={() => window.location.href = "tel:+2349036656251"}
+                  className="w-full h-14 bg-white text-black hover:bg-gold hover:text-white transition-all uppercase tracking-[3px] text-[10px] font-bold rounded-none"
+                >
                   <Phone size={14} className="mr-2" /> Call Agent
                 </Button>
-                <Button className="w-full h-14 bg-transparent border border-white/20 hover:border-white transition-all uppercase tracking-[3px] text-[10px] font-bold rounded-none">
-                  <Mail size={14} className="mr-2" /> Message Seller
-                </Button>
+                <InquiryModal 
+                  propertyTitle={property.title}
+                  trigger={
+                    <Button 
+                      className="w-full h-14 bg-transparent border border-white/20 hover:border-white transition-all uppercase tracking-[3px] text-[10px] font-bold rounded-none"
+                    >
+                      <Mail size={14} className="mr-2" /> Message Seller
+                    </Button>
+                  }
+                />
               </div>
             </div>
           </aside>
@@ -201,21 +207,20 @@ export function PropertyDetail() {
       </section>
 
       {/* Gallery Section */}
-      <section className="px-10 md:px-[60px] py-24 max-w-7xl mx-auto">
-        <h2 className="text-4xl font-serif italic mb-16 dark:text-white">
-          Living Spaces
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="bg-white dark:bg-black border-t border-white/10 mt-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
           {property.images.slice(1).map((image, i) => (
             <motion.div
               key={i}
-              whileHover={{ y: -10 }}
-              className="aspect-[4/3] overflow-hidden border border-border-custom dark:border-white/10"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: i * 0.1 }}
+              className="aspect-square overflow-hidden border-r border-b border-white/10 group cursor-pointer"
             >
               <SafeImage
                 src={image}
                 alt={`${property.title} view ${i + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
               />
             </motion.div>
           ))}
@@ -228,9 +233,14 @@ export function PropertyDetail() {
           <h2 className="text-5xl md:text-7xl font-serif italic text-white mb-10">
             Ready to experience <br /> {property.title}?
           </h2>
-          <Button className="h-16 px-16 bg-gold text-white hover:bg-white hover:text-black transition-all uppercase tracking-[4px] text-xs font-bold rounded-none">
-            Schedule a Private Tour
-          </Button>
+          <InquiryModal 
+            propertyTitle={property.title}
+            trigger={
+              <Button className="h-16 px-16 bg-gold text-white hover:bg-white hover:text-black transition-all uppercase tracking-[4px] text-xs font-bold rounded-none">
+                Schedule a Private Tour
+              </Button>
+            }
+          />
         </div>
       </section>
     </motion.div>

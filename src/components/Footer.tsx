@@ -53,21 +53,21 @@ export function Footer() {
             <div className="space-y-4">
               <div className="flex items-center gap-4 group cursor-pointer">
                 <div className="w-16 h-10 overflow-hidden border border-white/10">
-                  <SafeImage src="input_file_12.png" alt="Marbella Lofts" className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" />
+                  <SafeImage src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop" alt="Marbella Lofts" className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <span className="text-[10px] uppercase tracking-[1px] text-gray-custom group-hover:text-white">Marbella Lofts</span>
+                <span className="text-[10px] uppercase tracking-[1px] text-gray-custom group-hover:text-white transition-colors">Marbella Lofts</span>
               </div>
               <div className="flex items-center gap-4 group cursor-pointer">
                 <div className="w-16 h-10 overflow-hidden border border-white/10">
-                  <SafeImage src="input_file_15.png" alt="Valencia Manor" className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" />
+                  <SafeImage src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Valencia Manor" className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <span className="text-[10px] uppercase tracking-[1px] text-gray-custom group-hover:text-white">Valencia Manor</span>
+                <span className="text-[10px] uppercase tracking-[1px] text-gray-custom group-hover:text-white transition-colors">Valencia Manor</span>
               </div>
               <div className="flex items-center gap-4 group cursor-pointer">
                 <div className="w-16 h-10 overflow-hidden border border-white/10">
-                  <SafeImage src="input_file_2.png" alt="Ibiza Retreat" className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" />
+                  <SafeImage src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" alt="Ibiza Retreat" className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <span className="text-[10px] uppercase tracking-[1px] text-gray-custom group-hover:text-white">Ibiza Retreat</span>
+                <span className="text-[10px] uppercase tracking-[1px] text-gray-custom group-hover:text-white transition-colors">Ibiza Retreat</span>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@ export function Footer() {
 
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-gray-custom text-[10px] uppercase tracking-[2px]">
-            © {currentYear} DawRash Properties. All rights reserved.
+            © {currentYear} DawRash Real Estates. All rights reserved.
           </p>
           <div className="flex gap-10">
             <a href="#" className="text-gray-custom hover:text-white text-[10px] uppercase tracking-[2px] transition-colors">Privacy Policy</a>

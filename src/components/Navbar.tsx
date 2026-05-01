@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 import { ThemeToggle } from './ThemeToggle';
 import { SafeImage } from './SafeImage';
 import { Link } from 'react-router-dom';
+import { InquiryModal } from './InquiryModal';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,8 +40,8 @@ export function Navbar() {
       <div className="w-full flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
           <SafeImage
-            src="/logo-removebg-preview.png"
-            alt="DawRash Properties logo"
+            src="https://lh3.googleusercontent.com/d/1yrhZ3dmixSlQqkl1QB7XWMZ7vo33AXPN"
+            alt="DawRash Real Estates logo"
             className="w-24 h-24 object-contain"
           />
           <div
@@ -49,7 +50,7 @@ export function Navbar() {
               isScrolled ? "text-black dark:text-white" : "text-white"
             )}
           >
-            DawRash <span className="text-gold">Properties</span>
+            DawRash <span className="text-gold">Real Estates</span>
           </div>
         </Link>
 
@@ -71,17 +72,23 @@ export function Navbar() {
           
           <div className="flex items-center gap-4 ml-4 pl-4 border-l border-border-custom dark:border-white/10">
             <ThemeToggle isScrolled={isScrolled} />
-            <Button 
-              variant="ghost"
-              className={cn(
-                "uppercase tracking-[2px] text-[11px] font-semibold px-6 rounded-none border transition-all",
-                isScrolled 
-                  ? "text-black dark:text-white border-black dark:border-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black" 
-                  : "text-white border-white hover:bg-white hover:text-black"
-              )}
-            >
-              Inquiry
-            </Button>
+            <InquiryModal 
+              trigger={
+                <Button 
+                  variant="ghost"
+                  className={cn(
+                    "uppercase tracking-[3px] text-[10px] font-bold px-8 h-12 rounded-none border transition-all duration-500 relative overflow-hidden group",
+                    isScrolled 
+                      ? "text-black dark:text-white border-black/20 dark:border-white/20 hover:border-gold dark:hover:border-gold hover:text-gold dark:hover:text-gold" 
+                      : "text-white border-white/30 hover:border-gold hover:text-gold"
+                  )}
+                >
+                  <span className="relative z-10">Inquiry</span>
+                  <div className="absolute inset-0 bg-gold/0 group-hover:bg-gold/5 transition-colors duration-500" />
+                  <div className="absolute -bottom-[2px] left-0 w-0 h-[2px] bg-gold group-hover:w-full transition-all duration-700 ease-in-out" />
+                </Button>
+              }
+            />
           </div>
         </div>
 

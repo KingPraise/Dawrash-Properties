@@ -47,9 +47,7 @@ export const properties: Property[] = [
 The impressive exterior facades blend harmoniously with the natural landscape of Pilar de la Horadada. Each home features a private garden, ideal for enjoying the characteristic sunny climate of the area. The terraces and solariums offer unique spaces to relax outdoors while taking in the views. A private swimming pool in each property adds exclusivity, allowing you to enjoy refreshing moments without leaving home.
 
 The interior has been meticulously designed to maximise comfort and functionality. With three bedrooms and two bathrooms, each space is spacious and welcoming for the whole family. Porcelain tile flooring provides elegance and ease of daily maintenance. Underfloor heating ensures warmth during the colder months, while electric blinds and built-in wardrobes add modern practicality to the home.`,
-    images: [
-      "/1-1.jpg",
-    ],
+    images: ["/1-1.jpg"],
   },
   {
     id: "2",
@@ -62,7 +60,7 @@ The interior has been meticulously designed to maximise comfort and functionalit
     garages: 1,
     builtArea: 98,
     plotArea: 200,
-    type: "Villa",
+    type: "Mansion",
     features: [
       "Private Swimming Pool",
       "Solarium",
@@ -91,7 +89,7 @@ The homes are designed with maximum comfort and functionality in mind. With thre
     garages: 1,
     builtArea: 165,
     plotArea: 400,
-    type: "Villa",
+    type: "Penthouse",
     features: [
       "Sea Views",
       "Private Swimming Pool",
@@ -122,7 +120,7 @@ The interiors of the homes are designed with elegance and practicality in mind. 
     garages: 1,
     builtArea: 129,
     plotArea: 300,
-    type: "Villa",
+    type: "Mansion",
     features: [
       "Private Swimming Pool",
       "Private Garden",
@@ -154,7 +152,7 @@ The interior is meticulously designed to provide warmth and modern style. With t
     garages: 1,
     builtArea: 163,
     plotArea: 400,
-    type: "Villa",
+    type: "Mansion",
     features: [
       "Sea Views",
       "Near Golf Course (700m)",
@@ -175,7 +173,7 @@ The interior is meticulously designed to provide warmth and modern style. With t
 The exteriors of these detached homes in Finestrat are designed to take full advantage of the Mediterranean climate. Each property features a private garden and terrace, ideal for relaxing outdoors. In addition, they have a solarium that offers extra space to soak up the sun and enjoy panoramic sea views. The presence of a private swimming pool at each home adds a touch of luxury and exclusivity, allowing you to enjoy a refreshing swim in the privacy of your own home.
 
 The interior of these detached homes in Finestrat is designed for maximum comfort and functionality. With a layout that includes three bedrooms and three bathrooms, every space is optimized for the well-being of its residents. Ceramic tile floors add a modern touch and are easy to maintain. The kitchen is equipped with high-end appliances, and the home automation system allows for easy control of various aspects of the home.`,
-    images: ["/2-1 (1).jpg", "/2-1 (1).jpg" ],
+    images: ["/2-1 (1).jpg", "/2-1 (1).jpg"],
   },
   {
     id: "8",
@@ -188,7 +186,7 @@ The interior of these detached homes in Finestrat is designed for maximum comfor
     garages: 1,
     builtArea: 160,
     plotArea: 350,
-    type: "Villa",
+    type: "Luxury Villa",
     features: [
       "300m from the Sea",
       "Private Swimming Pool",
@@ -220,7 +218,7 @@ The interiors are meticulously designed to offer comfort and modern style. Ceram
     garages: 1,
     builtArea: 110,
     plotArea: 305,
-    type: "Villa",
+    type: "Penthouse",
     features: [
       "Parking",
       "Single-story Layout",
