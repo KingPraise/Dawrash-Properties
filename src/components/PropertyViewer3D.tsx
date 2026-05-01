@@ -94,7 +94,7 @@ export function PropertyViewer3D({ imageUrl, title, isOpen, onClose }: PropertyV
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-xl p-4 md:p-10"
+          className="fixed inset-0 z-100 flex items-center justify-center bg-black/90 backdrop-blur-xl p-4 md:p-10"
         >
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
@@ -103,7 +103,7 @@ export function PropertyViewer3D({ imageUrl, title, isOpen, onClose }: PropertyV
             className="relative w-full h-full max-w-6xl bg-white dark:bg-black overflow-hidden border border-white/10"
           >
             {/* Header */}
-            <div className="absolute top-0 left-0 right-0 z-10 p-6 flex items-center justify-between bg-gradient-to-b from-black/50 to-transparent pointer-events-none">
+            <div className="absolute top-0 left-0 right-0 z-10 p-6 flex items-center justify-between bg-linear-to-b from-black/50 to-transparent pointer-events-none">
               <div className="pointer-events-auto">
                 <h2 className="text-white text-2xl font-serif italic">{title}</h2>
                 <p className="text-white/60 text-[10px] uppercase tracking-[2px]">Interactive 3D Experience</p>

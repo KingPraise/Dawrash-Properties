@@ -62,7 +62,7 @@ export function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-24 px-10 md:px-[60px] bg-off-white dark:bg-[#0a0a0a] transition-colors duration-300">
+    <section id="contact" className="py-24 px-10 md:px-15 bg-off-white dark:bg-[#0a0a0a] transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           {/* Info Side */}

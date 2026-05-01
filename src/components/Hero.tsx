@@ -57,13 +57,13 @@ export function Hero() {
                 className="w-full h-full object-cover opacity-90 dark:opacity-70 transition-opacity duration-1000"
               />
             )}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/60 dark:from-black/80 dark:via-black/40 dark:to-black/80" />
+            <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/20 to-black/60 dark:from-black/80 dark:via-black/40 dark:to-black/80" />
           </motion.div>
         ))}
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-left px-10 md:px-[60px] w-full max-w-7xl mx-auto">
+      <div className="relative z-10 text-left px-10 md:px-15 w-full max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ export function Hero() {
           className="max-w-3xl"
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-[1px] bg-gold" />
+            <div className="w-10 h-px bg-gold" />
             <span className="text-white font-medium tracking-[2px] uppercase text-sm">
               Alicante, Spain
             </span>

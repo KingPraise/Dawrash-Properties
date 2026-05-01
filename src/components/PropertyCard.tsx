@@ -35,7 +35,7 @@ export function PropertyCard({ property, index }: PropertyCardProps) {
           <SafeImage 
             src={property.images[0]} 
             alt={property.title}
-            className="w-full h-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-110 opacity-70 group-hover:opacity-40"
+            className="w-full h-full object-cover transition-transform duration-1500 ease-out group-hover:scale-110 opacity-70 group-hover:opacity-40"
           />
           
           {/* Default Content (Visible initially, fades on hover) */}
@@ -43,7 +43,7 @@ export function PropertyCard({ property, index }: PropertyCardProps) {
             <h3 className="text-white text-4xl md:text-5xl font-serif italic mb-4 leading-tight drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)]">
               {property.title.split(' ').slice(0, 1)} {property.type.split(' ').pop()}
             </h3>
-            <div className="w-12 h-[1px] bg-gold/80 mb-4" />
+            <div className="w-12 h-px bg-gold/80 mb-4" />
             <p className="text-white/90 uppercase tracking-[5px] text-[9px] font-black drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
               {property.type === 'Luxury Villa' ? 'Sprawling Estates' : 
                property.type === 'Penthouse' ? 'Sky High Living' : 
@@ -61,7 +61,7 @@ export function PropertyCard({ property, index }: PropertyCardProps) {
                 {property.title}
               </h3>
               
-              <div className="w-10 h-[1px] bg-gold/50 mb-8" />
+              <div className="w-10 h-px bg-gold/50 mb-8" />
               
               <p className="text-gold text-3xl font-serif mb-10 tabular-nums tracking-tight">
                 {formatter.format(property.price)}
@@ -72,12 +72,12 @@ export function PropertyCard({ property, index }: PropertyCardProps) {
                   <span className="text-white text-base leading-none">{property.bedrooms.toString().padStart(2, '0')}</span>
                   <span className="text-[7px] opacity-60">Beds</span>
                 </div>
-                <div className="h-8 w-[1px] bg-white/10" />
+                <div className="h-8 w-px bg-white/10" />
                 <div className="flex flex-col gap-2">
                   <span className="text-white text-base leading-none">{property.bathrooms.toString().padStart(2, '0')}</span>
                   <span className="text-[7px] opacity-60">Baths</span>
                 </div>
-                <div className="h-8 w-[1px] bg-white/10" />
+                <div className="h-8 w-px bg-white/10" />
                 <div className="flex flex-col gap-2">
                   <span className="text-white text-base leading-none">{property.builtArea}</span>
                   <span className="text-[7px] opacity-60">m²</span>

@@ -130,7 +130,7 @@ export function InquiryModal({ trigger, propertyTitle }: { trigger: React.ReactE
               value={formData.message}
               onChange={handleChange}
               placeholder="How can we assist you?" 
-              className="rounded-none border-0 border-b border-border-custom dark:border-white/10 focus:border-gold min-h-[100px] px-0 bg-transparent shadow-none resize-none dark:text-white"
+              className="rounded-none border-0 border-b border-border-custom dark:border-white/10 focus:border-gold min-h-25 px-0 bg-transparent shadow-none resize-none dark:text-white"
               required
             />
           </div>

@@ -31,7 +31,7 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-10 md:px-[60px] h-20 flex items-center',
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-10 md:px-15 h-20 flex items-center',
         isScrolled 
           ? 'bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-sm border-b border-border-custom dark:border-white/10' 
           : 'bg-transparent'

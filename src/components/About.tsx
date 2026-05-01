@@ -5,7 +5,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="py-24 px-10 md:px-[60px] bg-white dark:bg-black transition-colors duration-300"
+      className="py-24 px-10 md:px-15 bg-white dark:bg-black transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">

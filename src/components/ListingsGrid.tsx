@@ -15,7 +15,7 @@ export function ListingsGrid() {
 
   return (
     <section id="properties" className="py-24 bg-white dark:bg-black transition-colors duration-300">
-      <div className="px-10 md:px-[60px] max-w-7xl mx-auto mb-20 text-center">
+      <div className="px-10 md:px-15 max-w-7xl mx-auto mb-20 text-center">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

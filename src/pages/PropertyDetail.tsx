@@ -55,7 +55,7 @@ export function PropertyDetail() {
       className="bg-white dark:bg-black pt-24"
     >
       {/* Header Section */}
-      <section className="px-10 md:px-[60px] py-16 max-w-7xl mx-auto">
+      <section className="px-10 md:px-15 py-16 max-w-7xl mx-auto">
         <Link
           to="/"
           className="inline-flex items-center gap-2 text-gray-custom hover:text-gold transition-colors mb-10 group"
@@ -72,7 +72,7 @@ export function PropertyDetail() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-[1px] bg-gold" />
+              <div className="w-8 h-px bg-gold" />
               <span className="text-gray-custom font-medium tracking-[2px] uppercase text-[10px]">
                 {property.location}
               </span>
@@ -93,8 +93,8 @@ export function PropertyDetail() {
       </section>
 
       {/* Hero Image Section */}
-      <section className="px-10 md:px-[60px] mb-24 overflow-hidden">
-        <div className="aspect-[21/9] w-full max-w-7xl mx-auto overflow-hidden border border-border-custom dark:border-white/10 group">
+      <section className="px-10 md:px-15 mb-24 overflow-hidden">
+        <div className="aspect-21/9 w-full max-w-7xl mx-auto overflow-hidden border border-border-custom dark:border-white/10 group">
           <SafeImage
             src={property.images[0]}
             alt={property.title}
@@ -104,7 +104,7 @@ export function PropertyDetail() {
       </section>
 
       {/* Details Grid & Description */}
-      <section className="px-10 md:px-[60px] py-20 bg-off-white dark:bg-[#0a0a0a] border-y border-border-custom dark:border-white/10">
+      <section className="px-10 md:px-15 py-20 bg-off-white dark:bg-[#0a0a0a] border-y border-border-custom dark:border-white/10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-24">
           <div className="space-y-12">
             <div>
@@ -220,7 +220,7 @@ export function PropertyDetail() {
               <SafeImage
                 src={image}
                 alt={`${property.title} view ${i + 1}`}
-                className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+                className="w-full h-full object-cover grayscale-20 group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
               />
             </motion.div>
           ))}
@@ -228,7 +228,7 @@ export function PropertyDetail() {
       </section>
 
       {/* Footer CTA */}
-      <section className="px-10 md:px-[60px] py-32 bg-black text-center">
+      <section className="px-10 md:px-15 py-32 bg-black text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-5xl md:text-7xl font-serif italic text-white mb-10">
             Ready to experience <br /> {property.title}?

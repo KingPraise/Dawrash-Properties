@@ -11,7 +11,7 @@ export function FeaturedProperty() {
   return (
     <section
       id="featured"
-      className="py-24 px-10 md:px-[60px] bg-white dark:bg-black text-black dark:text-white overflow-hidden border-y border-border-custom dark:border-white/10 transition-colors duration-300"
+      className="py-24 px-10 md:px-15 bg-white dark:bg-black text-black dark:text-white overflow-hidden border-y border-border-custom dark:border-white/10 transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-0 items-stretch border border-border-custom dark:border-white/10">
@@ -33,9 +33,9 @@ export function FeaturedProperty() {
                   className="w-full h-full object-cover opacity-90 dark:opacity-70 transition-all duration-700 group-hover:scale-105"
                 />
               </div>
-              <div className="absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-black/80 to-transparent text-white">
+              <div className="absolute bottom-0 left-0 right-0 p-10 bg-linear-to-t from-black/80 to-transparent text-white">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-[1px] bg-gold" />
+                  <div className="w-10 h-px bg-gold" />
                   <span className="text-[11px] uppercase tracking-[2px] font-semibold">
                     Alicante, Spain
                   </span>
